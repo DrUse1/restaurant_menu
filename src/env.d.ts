@@ -22,4 +22,5 @@ type TDish = {
   title: string;
   description: string;
   price: number;
+  oos?: true;
 };
