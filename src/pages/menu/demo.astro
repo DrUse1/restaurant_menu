@@ -1,0 +1,101 @@
+---
+import Card from "../../components/Card.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const card: TCard = {
+  title: "Menu du Restaurant",
+  sections: [
+    {
+      title: "Entrées",
+      categories: [
+        {
+          title: "Salades",
+          dishes: [
+            {
+              title: "Salade César",
+              description: "Laitue romaine, croûtons, parmesan, sauce César",
+              price: 8.99,
+            },
+            {
+              title: "Salade Niçoise",
+              description: "Thon, haricots verts, olives, œufs durs",
+              price: 9.99,
+            },
+          ],
+        },
+        {
+          title: "Soupes",
+          dishes: [
+            {
+              title: "Soupe à l'oignon",
+              description: "Oignons caramélisés, croûton, fromage suisse",
+              price: 7.99,
+            },
+            {
+              title: "Soupe du jour",
+              description: "Voir notre sélection de soupes fraîches",
+              price: 6.99,
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: "Plats Principaux",
+      categories: [
+        {
+          title: "Pâtes",
+          dishes: [
+            {
+              title: "Spaghetti Bolognaise",
+              description: "Sauce à la viande maison",
+              price: 12.99,
+            },
+            {
+              title: "Fettuccine Alfredo",
+              description: "Crème, beurre, parmesan",
+              price: 11.99,
+            },
+          ],
+        },
+      ],
+      dishes: [
+        {
+          title: "Poulet grillé",
+          description: "Avec légumes sautés",
+          price: 14.99,
+        },
+        {
+          title: "Burger du Chef",
+          description: "Bœuf, cheddar, bacon, frites",
+          price: 13.99,
+        },
+      ],
+    },
+    {
+      title: "Desserts",
+      dishes: [
+        {
+          title: "Tiramisu",
+          description: "Café, mascarpone, biscuits",
+          price: 7.99,
+        },
+        {
+          title: "Crème Brûlée",
+          description: "Vanille, caramel croquant",
+          price: 6.99,
+        },
+        {
+          title: "Gâteau au chocolat",
+          description: "Fondant au chocolat, crème anglaise",
+          price: 8.99,
+        },
+      ],
+    },
+  ],
+};
+---
+
+<Layout title="Welcome to Astro.">
+  <Card {...card} />
+</Layout>
